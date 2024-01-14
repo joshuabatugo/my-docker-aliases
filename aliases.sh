@@ -11,6 +11,8 @@ function docker_alias() {
         ${@:2}
 }
 
+GIT_EMAIL="batugojoshua@gmail.com"
+GIT_USERNAME="joshuabatugo"
 
 # JavaScript / CoffeeScript
 alias node="docker_alias /directory node node"
@@ -61,3 +63,6 @@ alias lamp-here="docker_alias /var/www/html tutum/lamp"
 
 # TFlint - https://github.com/wata727/tflint
 alias tflint="docker_alias /data wata727/tflint"
+
+# Git
+alias git="docker_alias /git -v $HOME/.ssh:/root/.ssh -v $HOME/.gitconfig:/root/.gitconfig alpine/git"
